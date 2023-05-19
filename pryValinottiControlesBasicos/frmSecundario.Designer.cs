@@ -33,6 +33,13 @@
             this.optRojo = new System.Windows.Forms.RadioButton();
             this.optAzul = new System.Windows.Forms.RadioButton();
             this.cmdAsignar = new System.Windows.Forms.Button();
+            this.gbOpciones = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.chkLucas = new System.Windows.Forms.CheckBox();
+            this.chkSebastian = new System.Windows.Forms.CheckBox();
+            this.chkValinotti = new System.Windows.Forms.CheckBox();
+            this.cmdEscribir = new System.Windows.Forms.Button();
+            this.gbOpciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTexto
@@ -56,6 +63,7 @@
             // optRojo
             // 
             this.optRojo.AutoSize = true;
+            this.optRojo.Checked = true;
             this.optRojo.Location = new System.Drawing.Point(303, 96);
             this.optRojo.Name = "optRojo";
             this.optRojo.Size = new System.Drawing.Size(47, 17);
@@ -85,18 +93,78 @@
             this.cmdAsignar.UseVisualStyleBackColor = true;
             this.cmdAsignar.Click += new System.EventHandler(this.cmdAsignar_Click);
             // 
+            // gbOpciones
+            // 
+            this.gbOpciones.Controls.Add(this.chkValinotti);
+            this.gbOpciones.Controls.Add(this.chkSebastian);
+            this.gbOpciones.Controls.Add(this.chkLucas);
+            this.gbOpciones.Location = new System.Drawing.Point(296, 225);
+            this.gbOpciones.Name = "gbOpciones";
+            this.gbOpciones.Size = new System.Drawing.Size(173, 100);
+            this.gbOpciones.TabIndex = 5;
+            this.gbOpciones.TabStop = false;
+            this.gbOpciones.Text = "Opciones";
+            // 
+            // chkLucas
+            // 
+            this.chkLucas.AutoSize = true;
+            this.chkLucas.Location = new System.Drawing.Point(52, 19);
+            this.chkLucas.Name = "chkLucas";
+            this.chkLucas.Size = new System.Drawing.Size(55, 17);
+            this.chkLucas.TabIndex = 0;
+            this.chkLucas.Text = "Lucas";
+            this.chkLucas.UseVisualStyleBackColor = true;
+            // 
+            // chkSebastian
+            // 
+            this.chkSebastian.AutoSize = true;
+            this.chkSebastian.Location = new System.Drawing.Point(52, 42);
+            this.chkSebastian.Name = "chkSebastian";
+            this.chkSebastian.Size = new System.Drawing.Size(73, 17);
+            this.chkSebastian.TabIndex = 1;
+            this.chkSebastian.Text = "Sebastian";
+            this.chkSebastian.UseVisualStyleBackColor = true;
+            // 
+            // chkValinotti
+            // 
+            this.chkValinotti.AutoSize = true;
+            this.chkValinotti.Location = new System.Drawing.Point(52, 65);
+            this.chkValinotti.Name = "chkValinotti";
+            this.chkValinotti.Size = new System.Drawing.Size(63, 17);
+            this.chkValinotti.TabIndex = 2;
+            this.chkValinotti.Text = "Valinotti";
+            this.chkValinotti.UseVisualStyleBackColor = true;
+            // 
+            // cmdEscribir
+            // 
+            this.cmdEscribir.Location = new System.Drawing.Point(316, 331);
+            this.cmdEscribir.Name = "cmdEscribir";
+            this.cmdEscribir.Size = new System.Drawing.Size(136, 24);
+            this.cmdEscribir.TabIndex = 6;
+            this.cmdEscribir.Text = "Escribir";
+            this.cmdEscribir.UseVisualStyleBackColor = true;
+            this.cmdEscribir.Click += new System.EventHandler(this.cmdEscribir_Click);
+            // 
             // frmSecundario
             // 
+            this.AcceptButton = this.cmdAsignar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 254);
+            this.ClientSize = new System.Drawing.Size(800, 507);
+            this.Controls.Add(this.cmdEscribir);
+            this.Controls.Add(this.gbOpciones);
             this.Controls.Add(this.cmdAsignar);
             this.Controls.Add(this.optAzul);
             this.Controls.Add(this.optRojo);
             this.Controls.Add(this.lblTexto);
             this.Controls.Add(this.txtTexto);
+            this.MaximizeBox = false;
             this.Name = "frmSecundario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Secundario";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.gbOpciones.ResumeLayout(false);
+            this.gbOpciones.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +177,11 @@
         private System.Windows.Forms.RadioButton optRojo;
         private System.Windows.Forms.RadioButton optAzul;
         private System.Windows.Forms.Button cmdAsignar;
+        private System.Windows.Forms.GroupBox gbOpciones;
+        private System.Windows.Forms.CheckBox chkValinotti;
+        private System.Windows.Forms.CheckBox chkSebastian;
+        private System.Windows.Forms.CheckBox chkLucas;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button cmdEscribir;
     }
 }
